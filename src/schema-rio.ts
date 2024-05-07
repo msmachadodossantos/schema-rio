@@ -31,7 +31,6 @@ function updatePlaceholders(inputElements: NodeListOf<HTMLInputElement>): void {
  */
 function handleInput(nodes: NodeListOf<HTMLInputElement>): void {
   // FIXME: If the last character is neither a letter from the alphabet nor a digit from 0 to 9, the script will enter an infinite loop.
-  // FIXME: (v1) See line 65 - Only Latin characters are accepted. The script must accept all Unicode characters.
   nodes.forEach((input) => {
     const pattern = input.getAttribute('data-schema-rio');
     if (!pattern) return; // If pattern attribute is not set, skip this input
